@@ -27,6 +27,7 @@ class Users
      * @var string
      *
      * @ORM\Column(name="firstname", type="string", length=255)
+     * @Assert\NotBlank
      */
     private $firstname;
 
@@ -34,6 +35,7 @@ class Users
      * @var string
      *
      * @ORM\Column(name="lastname", type="string", length=255)
+     * @Assert\NotBlank
      */
     private $lastname;
 
@@ -41,6 +43,8 @@ class Users
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=false)
+     * @Assert\NotBlank
+     * @Assert\Email
      */
  
     private $email;
@@ -49,6 +53,7 @@ class Users
      * @var string
      *
      * @ORM\Column(name="mobile", type="string", length=255)
+     * @Assert\NotBlank
      */
     private $mobile;
 
